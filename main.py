@@ -9,14 +9,14 @@ class Queue:
         self.__list.append(element)
 
     def get(self) -> Any:
-        if len(self.__list) != 0:
+        if not self.is_empty():
             return self.__list.pop(0)
 
     def is_empty(self) -> bool:
         return len(self.__list) == 0
 
     def peek(self) -> Any:
-        if len(self.__list) != 0:
+        if not self.is_empty():
             return self.__list[0]
 
     def __str__(self) -> str:
